@@ -5,6 +5,7 @@
 [![Architecture](https://img.shields.io/badge/Architecture-Whistle--Small%20(55.5M)-blue)](#2-model-architecture--binary-cact-layout)
 [![Quantization](https://img.shields.io/badge/Format-.cact%20(CQ4%20%2B%20FP16%2029.5MB)-green)](#2-model-architecture--binary-cact-layout)
 [![Benchmarks](https://img.shields.io/badge/Benchmarks-2%2C517%20Clips%20(5%20Datasets%20%C3%97%206%20Tiers)-orange)](#3-headline-results-phases-1--11)
+[![Hugging Face Checkpoints](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-vishnushuggingface%2Fshruti--hinglish--wsp-yellow)](https://huggingface.co/vishnushuggingface/shruti-hinglish-wsp)
 
 ---
 
@@ -112,7 +113,7 @@ Every phase is documented with its own standalone technical report, JSON metrics
 
 ## 5. Exported Checkpoints & Deterministic SHA-256 Verification
 
-All modified `.safetensors` (`212 MB`) and surgically patched `.cact` (`29,546,527` bytes) checkpoints are hosted on Hugging Face Hub and can also be **deterministically regenerated locally in <15 seconds** from the original `shruti.safetensors` and `shruti.cact` using:
+All modified `.safetensors` (`212 MB`) and surgically patched `.cact` (`29,546,527` bytes) checkpoints are hosted on Hugging Face Hub at **[`vishnushuggingface/shruti-hinglish-wsp`](https://huggingface.co/vishnushuggingface/shruti-hinglish-wsp)** and can also be **deterministically regenerated locally in <15 seconds** from the original `shruti.safetensors` and `shruti.cact` using:
 
 ```bash
 python3 scripts/apply_wsp_modifications.py

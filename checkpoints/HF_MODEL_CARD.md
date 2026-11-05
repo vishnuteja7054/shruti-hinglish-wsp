@@ -23,6 +23,9 @@ datasets:
 
 # Shruti-Hinglish-WSP: Weight-Space Programmed Checkpoints for `udgamlabs/Shruti` (`whistle-small` / `cactus-needle`)
 
+- **GitHub Research Repository (Code, Reports & Scripts)**: **[https://github.com/vishnuteja7054/shruti-hinglish-wsp](https://github.com/vishnuteja7054/shruti-hinglish-wsp)**
+- **Hugging Face Checkpoints Repository**: **[https://huggingface.co/vishnushuggingface/shruti-hinglish-wsp](https://huggingface.co/vishnushuggingface/shruti-hinglish-wsp)**
+
 This repository contains the **Weight-Space Programmed (WSP)** `.cact` (`29.5 MB` 4-bit `CQ4` + `FP16`) and `.safetensors` (`212 MB` `FP32`) model checkpoints across Phases 6–11 of our Weight-Space Programming research on `udgamlabs/Shruti` (`Cactus-Compute/whistle-small`, `55,517,513` parameters).
 
 ## Recommended Production Checkpoints
