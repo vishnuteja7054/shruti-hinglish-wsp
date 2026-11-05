@@ -1,0 +1,443 @@
+{
+  "WSP-E5_Ridge_Embedding": {
+    "fleurs_hi": {
+      "dev": {
+        "num_clips": 200,
+        "wer_pct": 22.85,
+        "cer_pct": 14.99,
+        "lid_acc_pct": 98.0,
+        "subs": 934,
+        "ins": 157,
+        "dels": 69
+      },
+      "test": {
+        "num_clips": 217,
+        "wer_pct": 22.46,
+        "cer_pct": 15.74,
+        "lid_acc_pct": 96.77,
+        "subs": 960,
+        "ins": 129,
+        "dels": 74
+      },
+      "all": {
+        "num_clips": 417,
+        "wer_pct": 22.65,
+        "cer_pct": 15.36,
+        "lid_acc_pct": 97.36,
+        "subs": 1894,
+        "ins": 286,
+        "dels": 143
+      }
+    },
+    "svarah_en": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 20.11,
+        "cer_pct": 10.12,
+        "lid_acc_pct": 91.67,
+        "subs": 455,
+        "ins": 136,
+        "dels": 59
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 21.13,
+        "cer_pct": 10.53,
+        "lid_acc_pct": 88.33,
+        "subs": 470,
+        "ins": 118,
+        "dels": 91
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 20.62,
+        "cer_pct": 10.32,
+        "lid_acc_pct": 90.0,
+        "subs": 925,
+        "ins": 254,
+        "dels": 150
+      }
+    },
+    "mucs_hinglish": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 57.89,
+        "cer_pct": 50.75,
+        "lid_acc_pct": 98.0,
+        "subs": 1294,
+        "ins": 603,
+        "dels": 473
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 49.67,
+        "cer_pct": 43.15,
+        "lid_acc_pct": 95.33,
+        "subs": 1063,
+        "ins": 581,
+        "dels": 286
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 53.88,
+        "cer_pct": 46.98,
+        "lid_acc_pct": 96.67,
+        "subs": 2357,
+        "ins": 1184,
+        "dels": 759
+      }
+    },
+    "lahaja_hi": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 24.19,
+        "cer_pct": 21.49,
+        "lid_acc_pct": 96.0,
+        "subs": 1042,
+        "ins": 105,
+        "dels": 44
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 30.11,
+        "cer_pct": 31.53,
+        "lid_acc_pct": 92.67,
+        "subs": 1301,
+        "ins": 92,
+        "dels": 43
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 27.1,
+        "cer_pct": 26.37,
+        "lid_acc_pct": 94.33,
+        "subs": 2343,
+        "ins": 197,
+        "dels": 87
+      }
+    },
+    "librispeech_en": {
+      "dev": {
+        "num_clips": 150,
+        "wer_pct": 5.75,
+        "cer_pct": 2.49,
+        "lid_acc_pct": 100.0,
+        "subs": 149,
+        "ins": 18,
+        "dels": 13
+      },
+      "test": {
+        "num_clips": 150,
+        "wer_pct": 7.55,
+        "cer_pct": 3.26,
+        "lid_acc_pct": 100.0,
+        "subs": 210,
+        "ins": 33,
+        "dels": 9
+      },
+      "all": {
+        "num_clips": 300,
+        "wer_pct": 6.68,
+        "cer_pct": 2.89,
+        "lid_acc_pct": 100.0,
+        "subs": 359,
+        "ins": 51,
+        "dels": 22
+      }
+    }
+  },
+  "WSP-E6_FinalNorm_Ridge": {
+    "fleurs_hi": {
+      "dev": {
+        "num_clips": 200,
+        "wer_pct": 23.12,
+        "cer_pct": 15.15,
+        "lid_acc_pct": 94.0,
+        "subs": 961,
+        "ins": 133,
+        "dels": 80
+      },
+      "test": {
+        "num_clips": 217,
+        "wer_pct": 23.25,
+        "cer_pct": 16.48,
+        "lid_acc_pct": 90.32,
+        "subs": 988,
+        "ins": 104,
+        "dels": 112
+      },
+      "all": {
+        "num_clips": 417,
+        "wer_pct": 23.19,
+        "cer_pct": 15.82,
+        "lid_acc_pct": 92.09,
+        "subs": 1949,
+        "ins": 237,
+        "dels": 192
+      }
+    },
+    "svarah_en": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 19.55,
+        "cer_pct": 9.89,
+        "lid_acc_pct": 94.33,
+        "subs": 446,
+        "ins": 118,
+        "dels": 68
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 21.04,
+        "cer_pct": 10.39,
+        "lid_acc_pct": 92.67,
+        "subs": 473,
+        "ins": 107,
+        "dels": 96
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 20.29,
+        "cer_pct": 10.13,
+        "lid_acc_pct": 93.5,
+        "subs": 919,
+        "ins": 225,
+        "dels": 164
+      }
+    },
+    "mucs_hinglish": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 59.55,
+        "cer_pct": 56.88,
+        "lid_acc_pct": 97.0,
+        "subs": 1354,
+        "ins": 605,
+        "dels": 479
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 56.69,
+        "cer_pct": 50.41,
+        "lid_acc_pct": 93.33,
+        "subs": 1153,
+        "ins": 789,
+        "dels": 261
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 58.16,
+        "cer_pct": 53.66,
+        "lid_acc_pct": 95.17,
+        "subs": 2507,
+        "ins": 1394,
+        "dels": 740
+      }
+    },
+    "lahaja_hi": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 23.92,
+        "cer_pct": 21.36,
+        "lid_acc_pct": 94.33,
+        "subs": 1030,
+        "ins": 100,
+        "dels": 48
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 30.45,
+        "cer_pct": 31.48,
+        "lid_acc_pct": 88.0,
+        "subs": 1291,
+        "ins": 94,
+        "dels": 67
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 27.13,
+        "cer_pct": 26.28,
+        "lid_acc_pct": 91.17,
+        "subs": 2321,
+        "ins": 194,
+        "dels": 115
+      }
+    },
+    "librispeech_en": {
+      "dev": {
+        "num_clips": 150,
+        "wer_pct": 6.01,
+        "cer_pct": 2.57,
+        "lid_acc_pct": 100.0,
+        "subs": 151,
+        "ins": 16,
+        "dels": 21
+      },
+      "test": {
+        "num_clips": 150,
+        "wer_pct": 7.55,
+        "cer_pct": 3.19,
+        "lid_acc_pct": 100.0,
+        "subs": 208,
+        "ins": 24,
+        "dels": 20
+      },
+      "all": {
+        "num_clips": 300,
+        "wer_pct": 6.8,
+        "cer_pct": 2.9,
+        "lid_acc_pct": 100.0,
+        "subs": 359,
+        "ins": 40,
+        "dels": 41
+      }
+    }
+  },
+  "WSP-E8_Combined_Analytic": {
+    "fleurs_hi": {
+      "dev": {
+        "num_clips": 200,
+        "wer_pct": 23.1,
+        "cer_pct": 15.32,
+        "lid_acc_pct": 94.0,
+        "subs": 951,
+        "ins": 136,
+        "dels": 86
+      },
+      "test": {
+        "num_clips": 217,
+        "wer_pct": 23.48,
+        "cer_pct": 16.63,
+        "lid_acc_pct": 90.32,
+        "subs": 998,
+        "ins": 103,
+        "dels": 115
+      },
+      "all": {
+        "num_clips": 417,
+        "wer_pct": 23.29,
+        "cer_pct": 15.98,
+        "lid_acc_pct": 92.09,
+        "subs": 1949,
+        "ins": 239,
+        "dels": 201
+      }
+    },
+    "svarah_en": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 19.55,
+        "cer_pct": 9.9,
+        "lid_acc_pct": 94.33,
+        "subs": 442,
+        "ins": 120,
+        "dels": 70
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 21.01,
+        "cer_pct": 10.41,
+        "lid_acc_pct": 92.67,
+        "subs": 467,
+        "ins": 112,
+        "dels": 96
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 20.28,
+        "cer_pct": 10.15,
+        "lid_acc_pct": 93.5,
+        "subs": 909,
+        "ins": 232,
+        "dels": 166
+      }
+    },
+    "mucs_hinglish": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 61.53,
+        "cer_pct": 58.12,
+        "lid_acc_pct": 97.0,
+        "subs": 1375,
+        "ins": 688,
+        "dels": 456
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 54.76,
+        "cer_pct": 48.56,
+        "lid_acc_pct": 93.33,
+        "subs": 1125,
+        "ins": 748,
+        "dels": 255
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 58.23,
+        "cer_pct": 53.37,
+        "lid_acc_pct": 95.17,
+        "subs": 2500,
+        "ins": 1436,
+        "dels": 711
+      }
+    },
+    "lahaja_hi": {
+      "dev": {
+        "num_clips": 300,
+        "wer_pct": 23.9,
+        "cer_pct": 21.16,
+        "lid_acc_pct": 94.33,
+        "subs": 1027,
+        "ins": 99,
+        "dels": 51
+      },
+      "test": {
+        "num_clips": 300,
+        "wer_pct": 30.28,
+        "cer_pct": 31.53,
+        "lid_acc_pct": 88.0,
+        "subs": 1284,
+        "ins": 91,
+        "dels": 69
+      },
+      "all": {
+        "num_clips": 600,
+        "wer_pct": 27.04,
+        "cer_pct": 26.2,
+        "lid_acc_pct": 91.17,
+        "subs": 2311,
+        "ins": 190,
+        "dels": 120
+      }
+    },
+    "librispeech_en": {
+      "dev": {
+        "num_clips": 150,
+        "wer_pct": 5.91,
+        "cer_pct": 2.56,
+        "lid_acc_pct": 100.0,
+        "subs": 149,
+        "ins": 16,
+        "dels": 20
+      },
+      "test": {
+        "num_clips": 150,
+        "wer_pct": 7.34,
+        "cer_pct": 3.12,
+        "lid_acc_pct": 100.0,
+        "subs": 203,
+        "ins": 23,
+        "dels": 19
+      },
+      "all": {
+        "num_clips": 300,
+        "wer_pct": 6.65,
+        "cer_pct": 2.85,
+        "lid_acc_pct": 100.0,
+        "subs": 352,
+        "ins": 39,
+        "dels": 39
+      }
+    }
+  }
+}

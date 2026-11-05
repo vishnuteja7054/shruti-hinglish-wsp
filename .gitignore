@@ -1,0 +1,20 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Large model weights (hosted on Hugging Face Hub; reproduced via scripts/apply_wsp_modifications.py)
+checkpoints/original/*.safetensors
+checkpoints/original/*.cact
+checkpoints/experiments/*.safetensors
+checkpoints/experiments/*.cact
+reports/phase2_step0_states.npz
+udgamlabs_shruti/
+
+# Compiled local C++ binary
+bin/needle
+
+# OS / Editor files
+.DS_Store
+*.swp

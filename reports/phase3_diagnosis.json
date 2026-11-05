@@ -1,0 +1,493 @@
+{
+  "phase": "Phase 3 Weight-Space Diagnosis & Mathematical Hypotheses",
+  "diagnosis_1_step0_lid": {
+    "mathematical_decomposition": "z_en(x) - z_hi(x) = <mu_0, e_en - e_hi> + <r(x), e_en - e_hi>, where mu_0 = E[h_{0,q}] is the deterministic BOS step-0 prior vector (||mu_0||_2 = 1.8759) and r(x) = h_{0,q}(x) - mu_0 is the acoustic-conditioned residual.",
+    "mu_0_l2_norm": 1.8759,
+    "e_en_l2_norm": 68.0231,
+    "e_hi_l2_norm": 53.1192,
+    "cos_e_en_e_hi": 0.6912,
+    "prior_bias_b0_en_minus_hi": -7.4732,
+    "per_dataset_step0_geometry": {
+      "fleurs_hi": {
+        "num_clips": 417,
+        "mean_h0q_l2_norm": 2.0643,
+        "mean_residual_l2_norm": 0.5817,
+        "cos_with_mu0_mean": 0.9619,
+        "prior_bias_b0_en_minus_hi": -7.4732,
+        "acoustic_signal_en_minus_hi_mean": -4.5194,
+        "acoustic_signal_en_minus_hi_std": 2.371,
+        "total_margin_en_minus_hi_mean": -11.9926,
+        "total_margin_en_minus_hi_std": 2.371,
+        "eu_other_max_logit_mean": -26.2916,
+        "pred_lang_distribution": {
+          "hi": 417
+        }
+      },
+      "lahaja_hi": {
+        "num_clips": 600,
+        "mean_h0q_l2_norm": 1.9745,
+        "mean_residual_l2_norm": 0.65,
+        "cos_with_mu0_mean": 0.9447,
+        "prior_bias_b0_en_minus_hi": -7.4732,
+        "acoustic_signal_en_minus_hi_mean": -6.113,
+        "acoustic_signal_en_minus_hi_std": 2.9597,
+        "total_margin_en_minus_hi_mean": -13.5862,
+        "total_margin_en_minus_hi_std": 2.9597,
+        "eu_other_max_logit_mean": -21.3997,
+        "pred_lang_distribution": {
+          "en": 2,
+          "hi": 598
+        }
+      },
+      "mucs_hinglish": {
+        "num_clips": 600,
+        "mean_h0q_l2_norm": 2.0841,
+        "mean_residual_l2_norm": 0.786,
+        "cos_with_mu0_mean": 0.9291,
+        "prior_bias_b0_en_minus_hi": -7.4732,
+        "acoustic_signal_en_minus_hi_mean": -5.1805,
+        "acoustic_signal_en_minus_hi_std": 2.5357,
+        "total_margin_en_minus_hi_mean": -12.6537,
+        "total_margin_en_minus_hi_std": 2.5357,
+        "eu_other_max_logit_mean": -20.6158,
+        "pred_lang_distribution": {
+          "hi": 600
+        }
+      },
+      "svarah_en": {
+        "num_clips": 600,
+        "mean_h0q_l2_norm": 1.9874,
+        "mean_residual_l2_norm": 0.7351,
+        "cos_with_mu0_mean": 0.9297,
+        "prior_bias_b0_en_minus_hi": -7.4732,
+        "acoustic_signal_en_minus_hi_mean": 5.7675,
+        "acoustic_signal_en_minus_hi_std": 5.4364,
+        "total_margin_en_minus_hi_mean": -1.7057,
+        "total_margin_en_minus_hi_std": 5.4364,
+        "eu_other_max_logit_mean": -29.1167,
+        "pred_lang_distribution": {
+          "en": 229,
+          "hi": 371
+        }
+      },
+      "librispeech_en": {
+        "num_clips": 300,
+        "mean_h0q_l2_norm": 1.9214,
+        "mean_residual_l2_norm": 1.0435,
+        "cos_with_mu0_mean": 0.8494,
+        "prior_bias_b0_en_minus_hi": -7.4732,
+        "acoustic_signal_en_minus_hi_mean": 19.2523,
+        "acoustic_signal_en_minus_hi_std": 1.46,
+        "total_margin_en_minus_hi_mean": 11.7791,
+        "total_margin_en_minus_hi_std": 1.46,
+        "eu_other_max_logit_mean": -32.4845,
+        "pred_lang_distribution": {
+          "en": 300
+        }
+      },
+      "silence": {
+        "num_clips": 100,
+        "mean_h0q_l2_norm": 0.7164,
+        "mean_residual_l2_norm": 1.4657,
+        "cos_with_mu0_mean": 0.7009,
+        "prior_bias_b0_en_minus_hi": -7.4732,
+        "acoustic_signal_en_minus_hi_mean": 6.2552,
+        "acoustic_signal_en_minus_hi_std": 0.0788,
+        "total_margin_en_minus_hi_mean": -1.2181,
+        "total_margin_en_minus_hi_std": 0.0788,
+        "eu_other_max_logit_mean": 2.5768,
+        "pred_lang_distribution": {
+          "hi": 100
+        }
+      }
+    },
+    "dev_calibrated_fisher_wsp": {
+      "reg": 0.01,
+      "gamma": 12.0,
+      "beta": 5.0,
+      "norm_delta_w": 12.6312,
+      "norm_delta_e_en": 6.3156,
+      "cos_e_en_orig_new": 0.99599,
+      "cos_e_hi_orig_new": 0.99323,
+      "dev_lid_acc": {
+        "fleurs_hi": 99.0,
+        "lahaja_hi": 96.33,
+        "mucs_hinglish": 98.0,
+        "svarah_en": 92.0,
+        "librispeech_en": 100.0
+      }
+    },
+    "dev_calibrated_pure_bias_beta": 4.7,
+    "heldout_test_lid_verification": {
+      "fleurs_hi": {
+        "target_lang": "hi",
+        "orig_dev_lid_acc_pct": 100.0,
+        "new_dev_lid_acc_pct": 99.0,
+        "orig_test_lid_acc_pct": 100.0,
+        "new_test_lid_acc_pct": 97.7,
+        "orig_all_lid_acc_pct": 100.0,
+        "new_all_lid_acc_pct": 98.32
+      },
+      "lahaja_hi": {
+        "target_lang": "hi",
+        "orig_dev_lid_acc_pct": 99.33,
+        "new_dev_lid_acc_pct": 96.33,
+        "orig_test_lid_acc_pct": 100.0,
+        "new_test_lid_acc_pct": 93.33,
+        "orig_all_lid_acc_pct": 99.67,
+        "new_all_lid_acc_pct": 94.83
+      },
+      "mucs_hinglish": {
+        "target_lang": "hi",
+        "orig_dev_lid_acc_pct": 100.0,
+        "new_dev_lid_acc_pct": 98.0,
+        "orig_test_lid_acc_pct": 100.0,
+        "new_test_lid_acc_pct": 95.67,
+        "orig_all_lid_acc_pct": 100.0,
+        "new_all_lid_acc_pct": 96.83
+      },
+      "svarah_en": {
+        "target_lang": "en",
+        "orig_dev_lid_acc_pct": 38.33,
+        "new_dev_lid_acc_pct": 92.0,
+        "orig_test_lid_acc_pct": 38.0,
+        "new_test_lid_acc_pct": 88.0,
+        "orig_all_lid_acc_pct": 38.17,
+        "new_all_lid_acc_pct": 90.0
+      },
+      "librispeech_en": {
+        "target_lang": "en",
+        "orig_dev_lid_acc_pct": 100.0,
+        "new_dev_lid_acc_pct": 100.0,
+        "orig_test_lid_acc_pct": 100.0,
+        "new_test_lid_acc_pct": 100.0,
+        "orig_all_lid_acc_pct": 100.0,
+        "new_all_lid_acc_pct": 100.0
+      }
+    }
+  },
+  "diagnosis_2_hinglish_script_competition": {
+    "mean_latin_token_norm": 70.3258,
+    "std_latin_token_norm": 16.4089,
+    "mean_devanagari_token_norm": 62.309,
+    "std_devanagari_token_norm": 5.0503,
+    "latin_to_devanagari_norm_ratio": 1.12866,
+    "mucs_auto_script_word_counts": {
+      "ref_latin_words": 1249,
+      "hyp_latin_words": 2178,
+      "latin_overprediction_ratio": 1.7438,
+      "ref_devanagari_words": 6695,
+      "hyp_devanagari_words": 6381
+    },
+    "mucs_forced_hi_script_word_counts": {
+      "ref_latin_words": 1249,
+      "hyp_latin_words": 2178,
+      "latin_overprediction_ratio": 1.7438,
+      "ref_devanagari_words": 6695,
+      "hyp_devanagari_words": 6381
+    },
+    "mucs_auto_token_competition": {
+      "picked_latin_tokens": 3404,
+      "picked_devanagari_tokens": 13184,
+      "mean_latin_margin_over_dev": 7.432313609557482,
+      "mean_dev_margin_over_latin": 10.133750320312757,
+      "mean_latin_step_h_norm": 0.9393489687374139,
+      "mean_dev_step_h_norm": 1.274913436552347
+    },
+    "mucs_forced_hi_token_competition": {
+      "picked_latin_tokens": 3404,
+      "picked_devanagari_tokens": 13184,
+      "mean_latin_margin_over_dev": 7.432313609557482,
+      "mean_dev_margin_over_latin": 10.133750320312757,
+      "mean_latin_step_h_norm": 0.9393489687374139,
+      "mean_dev_step_h_norm": 1.274913436552347
+    },
+    "mucs_dev_to_en_word_subs_auto": 780,
+    "mucs_en_to_dev_word_subs_auto": 167,
+    "mucs_dev_to_en_word_subs_forced": 780,
+    "mucs_en_to_dev_word_subs_forced": 167
+  },
+  "diagnosis_3_devanagari_confusion_geometry": [
+    {
+      "ref_word": "है",
+      "hyp_word": "हैं",
+      "dev_split_error_count": 46,
+      "ref_tid": 8332,
+      "hyp_tid": 8374,
+      "cosine_similarity": 0.9258,
+      "ref_l2_norm": 58.399,
+      "hyp_l2_norm": 59.7978,
+      "hyp_minus_ref_norm": 1.3987
+    },
+    {
+      "ref_word": "वह",
+      "hyp_word": "वो",
+      "dev_split_error_count": 35,
+      "ref_tid": null,
+      "hyp_tid": 8688
+    },
+    {
+      "ref_word": "हैं",
+      "hyp_word": "है",
+      "dev_split_error_count": 30,
+      "ref_tid": 8374,
+      "hyp_tid": 8332,
+      "cosine_similarity": 0.9258,
+      "ref_l2_norm": 59.7978,
+      "hyp_l2_norm": 58.399,
+      "hyp_minus_ref_norm": -1.3987
+    },
+    {
+      "ref_word": "यह",
+      "hyp_word": "ये",
+      "dev_split_error_count": 26,
+      "ref_tid": 8740,
+      "hyp_tid": 8572,
+      "cosine_similarity": 0.9204,
+      "ref_l2_norm": 59.7628,
+      "hyp_l2_norm": 59.812,
+      "hyp_minus_ref_norm": 0.0491
+    },
+    {
+      "ref_word": "की",
+      "hyp_word": "कि",
+      "dev_split_error_count": 16,
+      "ref_tid": 8368,
+      "hyp_tid": 8354,
+      "cosine_similarity": 0.8668,
+      "ref_l2_norm": 60.7321,
+      "hyp_l2_norm": 59.199,
+      "hyp_minus_ref_norm": -1.5331
+    },
+    {
+      "ref_word": "ज़िले",
+      "hyp_word": "जिले",
+      "dev_split_error_count": 11,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "फ़ैशन",
+      "hyp_word": "fashion",
+      "dev_split_error_count": 9,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "टी",
+      "hyp_word": "t",
+      "dev_split_error_count": 8,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "नम्बर",
+      "hyp_word": "number",
+      "dev_split_error_count": 8,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "पी",
+      "hyp_word": "p",
+      "dev_split_error_count": 8,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "स्लाइड",
+      "hyp_word": "slide",
+      "dev_split_error_count": 8,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "क्लिक",
+      "hyp_word": "click",
+      "dev_split_error_count": 8,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "है",
+      "hyp_word": "करें",
+      "dev_split_error_count": 8,
+      "ref_tid": 8332,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "की",
+      "hyp_word": "के",
+      "dev_split_error_count": 7,
+      "ref_tid": 8368,
+      "hyp_tid": 8340,
+      "cosine_similarity": 0.8777,
+      "ref_l2_norm": 60.7321,
+      "hyp_l2_norm": 60.1896,
+      "hyp_minus_ref_norm": -0.5425
+    },
+    {
+      "ref_word": "वन",
+      "hyp_word": "one",
+      "dev_split_error_count": 7,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "टेक्स्ट",
+      "hyp_word": "text",
+      "dev_split_error_count": 7,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "ट्युटोरियल",
+      "hyp_word": "tutorial",
+      "dev_split_error_count": 7,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "सिक्स",
+      "hyp_word": "six",
+      "dev_split_error_count": 6,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "फ़ाइव",
+      "hyp_word": "five",
+      "dev_split_error_count": 6,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "पर",
+      "hyp_word": "पे",
+      "dev_split_error_count": 6,
+      "ref_tid": 8390,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "स्कूल",
+      "hyp_word": "school",
+      "dev_split_error_count": 6,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "ओ",
+      "hyp_word": "o",
+      "dev_split_error_count": 6,
+      "ref_tid": 8222,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "नाइन",
+      "hyp_word": "nine",
+      "dev_split_error_count": 5,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "एट",
+      "hyp_word": "eight",
+      "dev_split_error_count": 5,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "महत्त्व",
+      "hyp_word": "महत्व",
+      "dev_split_error_count": 5,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "बॉक्स",
+      "hyp_word": "box",
+      "dev_split_error_count": 5,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "सामान",
+      "hyp_word": "समान",
+      "dev_split_error_count": 4,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "यह",
+      "hyp_word": "या",
+      "dev_split_error_count": 4,
+      "ref_tid": 8740,
+      "hyp_tid": 8342,
+      "cosine_similarity": 0.822,
+      "ref_l2_norm": 59.7628,
+      "hyp_l2_norm": 61.2269,
+      "hyp_minus_ref_norm": 1.464
+    },
+    {
+      "ref_word": "तौर",
+      "hyp_word": "आमतौर",
+      "dev_split_error_count": 4,
+      "ref_tid": null,
+      "hyp_tid": null
+    },
+    {
+      "ref_word": "ये",
+      "hyp_word": "यह",
+      "dev_split_error_count": 4,
+      "ref_tid": 8572,
+      "hyp_tid": 8740,
+      "cosine_similarity": 0.9204,
+      "ref_l2_norm": 59.812,
+      "hyp_l2_norm": 59.7628,
+      "hyp_minus_ref_norm": -0.0491
+    }
+  ],
+  "testable_hypotheses": [
+    {
+      "id": "H1 (Step-0 Language Tag Subspace Steering & European Tag Suppression)",
+      "target_tensors": [
+        "embedding/embedding[8906:8914, :]"
+      ],
+      "num_params_changed": 4096,
+      "pct_of_model": "0.00738%",
+      "mathematical_formulation": "E'[8906] = E[8906] + 0.5 * (gamma * u_Fisher + beta * mu_0_unit), E'[8913] = E[8913] - 0.5 * (gamma * u_Fisher + beta * mu_0_unit), E'[8907:8913] = E[8907:8913] - 2.0 * mu_0_unit",
+      "expected_impact": "Eliminates step-0 Hindi/European misrouting on Svarah Indian English and LibriSpeech while preserving >99% Hindi Auto-LID accuracy on FLEURS, Lahaja, and MUCS Hinglish, with cos(e_orig, e_new) > 0.999 so Forced-LID decoding is unperturbed."
+    },
+    {
+      "id": "H2 (Devanagari Output Projection Norm Equalization for Hinglish & Hindi)",
+      "target_tensors": [
+        "embedding/embedding[8192:8906, :]"
+      ],
+      "num_params_changed": 365568,
+      "pct_of_model": "0.658%",
+      "mathematical_formulation": "E'[8192:8906] = alpha_dev * E[8192:8906] with alpha_dev in [1.03, 1.09] calibrated on Dev split. Because Decoder Layer 0 applies scale-invariant _rms_unit(x) to input token embeddings whereas the output projection logits = aq(h) @ E.T is linear in ||E[t]||_2, radial scaling boosts Devanagari output logits by alpha_dev while keeping input directions invariant.",
+      "expected_impact": "Reduces Latin over-prediction and Devanagari->Latin script mismatches on MUCS Hinglish and improves Devanagari word recall on Hindi benchmarks."
+    },
+    {
+      "id": "H3 (Contrastive Pairwise Decoupling & Norm Balancing of High-Confusion Devanagari Tokens)",
+      "target_tensors": [
+        "embedding/embedding[selected_devanagari_ids, :]"
+      ],
+      "num_params_changed": "5120 - 15360",
+      "pct_of_model": "< 0.03%",
+      "mathematical_formulation": "For confused Devanagari token pairs (i, j) with cos(e_i, e_j) > 0.85 and systematic substitution bias on Dev splits, apply small orthogonal repulsion e_i' = e_i + eta * (e_i - <e_i, hat{e}_j> hat{e}_j) and norm-balance adjustment.",
+      "expected_impact": "Reduces recurring Hindi function-word and nasalization/matra confusions (e.g., है/हैं, की/के, मैं/में) without altering acoustic encoder weights."
+    },
+    {
+      "id": "H4 (Decoder Cross-Attention & Engram Gate Calibration)",
+      "target_tensors": [
+        "stack/layers/block/attn_gate",
+        "engrams_0/embedding",
+        "engrams_1/embedding"
+      ],
+      "num_params_changed": "16 - 2097152",
+      "mathematical_formulation": "Test whether scaling final decoder cross-attention gates or damping noisy bigram/trigram engram injections improves accented speech robustness or induces regressions.",
+      "expected_impact": "Provides a direct falsifiable test of decoder internal gate/engram sensitivity vs. output-space embedding geometry."
+    }
+  ]
+}
